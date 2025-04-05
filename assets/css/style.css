@@ -131,6 +131,16 @@ nav a:hover::after {
     text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
 }
 
+.hero .value-statement {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #D4AF37;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.7);
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
