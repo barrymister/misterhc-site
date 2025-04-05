@@ -6,9 +6,12 @@
     <title>Mister Holdings Corporation</title>
     <meta name="description" content="Mister Holdings Corporation - Your trusted partner in business and technology">
     <meta name="keywords" content="business, technology, partner, services">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
@@ -54,6 +57,32 @@
             padding-top: 20px;
             border-top: 1px solid #ddd;
         }
+        .hero {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .parallax {
+            background-attachment: fixed;
+        }
+        .loading {
+            animation: loading 2s infinite;
+        }
+        @keyframes loading {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -64,7 +93,10 @@
     </nav>
 
     <main>
-        <h1>Welcome to Mister Holdings Corporation</h1>
+        <div class="hero parallax" style="background-image: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+            <h1 class="loading">Welcome to Mister Holdings Corporation</h1>
+            <p class="loading" style="font-size: 1.5rem; margin-top: 1rem;">Innovative Solutions for Modern Business</p>
+        </div>
 
         <div class="card">
             <h2>Our Mission</h2>
