@@ -97,21 +97,26 @@ nav a:hover::after {
 
 /* Hero Section */
 .hero {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
-                url('assets/images/dragoncrest.png') center/cover no-repeat;
+    background: url('assets/images/dragoncrest.png') center/cover no-repeat;
     text-align: center;
-    color: var(--text-color);
-    font-family: 'Cinzel', serif;
+    overflow: hidden;
 }
 
-.hero-content {
-    max-width: 800px;
-    padding: 2rem;
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: #F5F5DC;
+    font-family: 'Cinzel', serif;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    margin: 1rem;
 }
 
 .hero h1 {
@@ -124,6 +129,21 @@ nav a:hover::after {
     font-size: 1.5rem;
     margin-top: 1rem;
     text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text {
+    animation: fadeIn 1s ease-out forwards;
 }
 
 /* Main Content */
