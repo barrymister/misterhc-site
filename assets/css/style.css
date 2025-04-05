@@ -1,14 +1,13 @@
 :root {
     --primary-bg: #0B0B0B;
+    --section-bg: #1A1A1A;
     --accent-gold: #D4AF37;
     --gold-foil: #FFD700;
     --text-color: #F5F5DC;
-    --secondary-text: #CCCCCC;
+    --body-text: #CCCCCC;
     --link-hover: #4B1D1D;
-    --alt-bg: #1A1A1A;
-    --gradient-start: #D4AF37;
-    --gradient-end: #FFD700;
-    --shadow-color: rgba(0, 0, 0, 0.2);
+    --shadow-color: rgba(212, 175, 55, 0.1);
+    --border-color: #2e2e2e;
 }
 
 * {
@@ -18,9 +17,9 @@
 }
 
 body {
-    font-family: 'Lora', Georgia, serif;
+    font-family: 'Lora', serif;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--body-text);
     background-color: var(--primary-bg);
     min-height: 100vh;
 }
@@ -31,7 +30,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--alt-bg);
+    background: var(--section-bg);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -45,7 +44,7 @@ body {
 
 /* Navigation */
 nav {
-    background: rgba(11, 11, 11, 0.95);
+    background: var(--section-bg);
     backdrop-filter: blur(10px);
     padding: 1rem;
     box-shadow: 0 2px 15px var(--shadow-color);
@@ -90,6 +89,7 @@ nav a::after {
 nav a:hover {
     color: var(--gold-foil);
     transform: translateY(-2px);
+    text-shadow: 0 0 5px var(--accent-gold);
 }
 
 nav a:hover::after {
@@ -111,11 +111,11 @@ h1, h2, h3 {
     font-family: 'Cinzel', serif;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.7);
 }
 
 h1 {
     font-size: 3.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1::after {
@@ -138,14 +138,13 @@ h1:hover::after {
 
 /* Cards */
 .card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
+    background: var(--section-bg);
+    border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 10px 30px var(--shadow-color);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
 }
 
 .card:hover {
@@ -163,11 +162,12 @@ h1:hover::after {
 
 /* Project Cards */
 .project-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
+    background: var(--section-bg);
+    border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 10px 30px var(--shadow-color);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -302,5 +302,5 @@ footer a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85));
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.85));
 }
